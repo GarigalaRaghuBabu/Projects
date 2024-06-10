@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/style1.css">
+    <title>CONTACTUS</title>
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop id="myVideo">
+            <source src="../images/bg.mp4" type="video/mp4">
+        </video>
+        <!-- Optional: Add overlay content here -->
+        <div class="content">
+            <form class="reg-containor" action="success.html">
+                <h1 style="text-align: center;">CONTACTUS</h1>
+                <div class="input-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email">
+                </div>
+                <div class="input-group">
+                    <label for="name">Phone number</label>
+                    <input type="text" id="phone" name="phone">
+                </div>
+                <div class="input-group">
+                    <label for="message">Message:</label>
+                    <input type="text" id="message" name="message">
+                </div>
+                <div> <button type="submit" onsubmit="form()">Submit</button>
+                <button type="reset">Reset</button></div>
+                </form>
+            <!-- Use a button to pause/play the video with JavaScript -->
+            <button id="myBtn" onclick="myFunction()">Pause</button>
+        </div>
+    </div>
+    <script>
+        // Get the video element
+        var video = document.getElementById("myVideo");
+        // Get the button element
+        var btn = document.getElementById("myBtn");
+
+        // Pause and play the video, and change the button text
+        function myFunction() {
+            if (video.paused) {
+                video.play();
+                btn.innerHTML = "Pause";
+            } else {
+                video.pause();
+                btn.innerHTML = "Play";
+            }
+        }
+    </script>
+<script> function form(){
+    document.innerHTML('success.html');}
+ </script>
+
+</body>
+</html>

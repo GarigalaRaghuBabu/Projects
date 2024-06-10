@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Successful</title>
+    <link rel="stylesheet" href="../css/pj3-success.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Form</title>
+        <link rel="stylesheet" href="../css/pj3.css">
+        <script>
+            function validateLogin(event) {
+                event.preventDefault();
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+
+                // Hardcoded credentials for demonstration
+                var validUsername = 'user';
+                var validPassword = 'password';
+
+                if (username === validUsername && password === validPassword) {
+                    window.location.href = 'success.html';
+                } else {
+                    alert('Invalid credentials. Please try again.');
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    <!-- The video -->
+    <video autoplay muted loop id="myVideo">
+        <source src="../images/bg.mp4" type="video/mp4">
+    </video>
+
+    <!-- Optional: Overlay content -->
+    <div class="content">
+        <div class="success-container">
+            <h2>Login Successful</h2>
+            <p>Welcome to the site!</p>
+        </div>
+        <!-- Use a button to pause/play the video -->
+        <button id="myBtn" onclick="myFunction()">Pause</button>
+    </div>
+</body>
+    </html>
+</body>
+</html>

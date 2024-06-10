@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="../css/pj3.css">
+    <script>
+        function validateLogin(event) {
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Hardcoded credentials for demonstration
+            var validUsername = 'user';
+            var validPassword = 'password';
+
+            if (username === validUsername && password === validPassword) {
+                window.location.href = 'success.html';
+            } else {
+                alert('Invalid credentials. Please try again.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="#">Registration</a>
+    </div>
+<!-- The video -->
+<video autoplay muted loop id="myVideo">
+    <source src="../images/bg.mp4" type="video/mp4">
+</video>
+
+<!-- Optional: Overlay content -->
+<div class="content">
+    <div class="login-container" style="text-align: left;">
+            <form id="form" action="success.html" >
+
+                <h1>REGISTER HERE</h1>
+                FULL_NAME:<input type="text" name="your name" style="padding:5px;">
+
+                GENDER:<input type="radio" name="male" value="male">Male
+<input type="radio" name="female" value="F">Female
+<input type="radio" name="other" value="O">Others
+<br>
+<br>
+                PHONE-NUMBER:<input type="number" name="phno" value="phno">
+                <br>
+
+                COUNTRY:<select name="country" style="padding: 5px;">
+                    <option value="India">india</option>
+                    <option value="usa">usa</option>
+                    <option value="others">others</option>
+                 </select>
+                 <br>
+HOME_ADDRESS:<input type="text" name="address" value="address">
+<br>
+                 <input type="submit" name="submit" value="submit">
+                 <input type="submit" value="goto login page">
+                 </form>
+        </form>
+    </div>
+    <!-- Use a button to pause/play the video -->
+    <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+
+
+</body>
+</html>
